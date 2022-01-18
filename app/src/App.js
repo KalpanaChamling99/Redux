@@ -1,12 +1,10 @@
-// import Counter from './Components/Counter';
-import CounterWithClassBased from './Components/CounterWithClass';
+import Counter from './Components/Counter';
 import './App.css';
 
 function App() {
   return (
     <div className="container">
-        {/* <Counter /> */}
-        <CounterWithClassBased />
+        <Counter />
     </div>
   );
 }
