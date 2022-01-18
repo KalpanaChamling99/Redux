@@ -1,0 +1,31 @@
+
+button{
+    &.default{
+        background-color: purple;
+        color: #fff;
+        border: 0;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+
+.counter{
+    .counter-title{
+        margin: 10px 0 0;
+        color: purple;
+        line-height: 1;
+    }
+    .counter-value{
+        padding-top: 15px;
+        font-size: 20px;
+        font-weight: 800;
+    }
+    button{
+        margin-top: 15px;
+    }
+}
