@@ -1,13 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
 import Card from './../UI/Card';
-import store from './../Store/index';
 import classes from './style.module.scss';
 
 const Counter = () => {
     const dispatch = useDispatch();
 
     const counter = useSelector( state => state.counter);
-
+    const showCounterValue = useSelector( state => state.showCounter);
     const incrementHandler = () => {
         dispatch({type:'increment'});
     }
@@ -18,13 +17,13 @@ const Counter = () => {
         dispatch({type:'decrement'});
     }
     const toggleCounterHandler = () => {
-
+        dispatch({type:'toggle'});
     }
     return(
         <Card class={classes.counter}>
 
             <h2 className={classes['counter-title']}>Redux counter</h2>
-            <div className={classes['counter-value']}>{counter}</div>
+            {showCounterValue && <div className={classes['counter-value']}>{counter}</div>}
 
             <div className={classes['button-section']}>
                 <button className={classes['default']} onClick={incrementHandler}>Increment</button>
